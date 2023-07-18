@@ -216,6 +216,7 @@ footer {
     }
     .details {
         width: 100%;
+        font-size: 14px;
     }
     
     .event-grid {
