@@ -1,8 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+
+[data-aos]{
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+    transform: unset;
+}
+
+.body{
+  overflow: hidden;
 }
 
 #hero {
@@ -70,6 +88,15 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
+}
+
+.hostel_name {
+    font-size: 48px;
+}
+
+.hostel_mantra {
+    font-family: "Caveat", sans-serif;
+    font-size: 20px;
 }
 
 #about, #events, #excos{
@@ -159,12 +186,15 @@
 
 .name {
     font-weight: bold;
+    font-family: "Caveat", sans-serif;
+    font-size: 24px;
 }
 .role {
     font-weight: bold;
     color: #3A0125;
-    margin: 10px 0;
+    margin: 5px 0;
     text-transform: uppercase;
+    font-size: 14px;
 }
 
 .event-grid {
@@ -175,7 +205,6 @@
     margin-top: 50px;
 }
 
-.event {}
 .event img {
     height: 300px;
 }
@@ -197,6 +226,11 @@ footer {
     nav{
         display: none;
     }
+
+    .hostel_name {
+        font-size: 28px;
+    }
+
     .social_btn{
         margin-left: 10px;
     }
