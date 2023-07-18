@@ -140,7 +140,7 @@
     position: relative;
     display: flex;
     animation-name: slideranimation;
-    animation-duration: 30s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
