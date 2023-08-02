@@ -19,6 +19,11 @@
     transform: unset;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .body{
   overflow: hidden;
 }
@@ -208,6 +213,79 @@
 .event img {
     height: 300px;
 }
+  
+#gallery {
+    width: 100%;
+} 
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    cursor: pointer;
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.gallery img:nth-child(1){
+    grid-row: 1 / span 2;
+    height: 100%
+}
+.gallery img:nth-child(2){
+    grid-column: 2 / span 2;
+}
+.gallery img:nth-child(3){
+    grid-column: 4 / span 4;
+    grid-row: 1 / span 1;
+    height: 55%;
+}
+.gallery img:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    grid-column: 4 / span 4;
+    grid-row: 1 / span 1;
+}
+.gallery img:last-child{
+    width: 100%;
+}
+
+.gallery img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.02);
+}
+
+.view_btn {
+    margin: 0 auto;
+    color: #fff;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.3s linear;
+    outline: none;
+}
+    
+.view_btn a {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #333;
+    margin: 20px auto;
+    padding: 14px 20px;
+}
+.view_btn:hover {
+    transition: all 0.3s linear;
+    transform: scale(1.02);
+}
 
 footer {
     background-color: #3A0125;
@@ -235,7 +313,7 @@ footer {
         margin-left: 10px;
     }
     .social_btn img {
-        height: 20px;
+        height: 25px;
     }
 
     .img-container {
@@ -259,5 +337,12 @@ footer {
     }
     .excos {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .gallery {
+        width: 100%;
+        display: block;
+    }
+    .gallery img:nth-child(4){
+        position: relative;
     }
 }
